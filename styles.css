@@ -1,16 +1,4 @@
 button {
-  cursor: pointer;
-}
-
-.box {
-  background-color: #333333;
-  color: azure;
-  width: 452px;
-  margin: auto;
-}
-
-.digits {
-  text-align: center;
   width: 113px;
   height: 70px;
   border-color: black;
@@ -18,21 +6,28 @@ button {
   border-width: 1px;
   font-size: 50px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  float: left;
+  cursor: pointer;
+}
+
+.box {
+  width: 452px;
+  margin: auto;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #333333;
+  color: azure;
+}
+
+.digits {
   background-color: whitesmoke;
   color: black;
 }
 
 .operations {
-  text-align: center;
-  width: 113px;
-  height: 70px;
-  border-color: black;
-  border-style: groove;
-  border-width: 1px;
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  float: left;
   background-color: #8c8c8c;
   color: whitesmoke;
 }
@@ -48,7 +43,15 @@ button {
 }
 
 .calc {
-  float: right;
+  align-self: flex-end;
+  min-height: 24px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding-right: 5px;
+  font-size: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
